@@ -68,10 +68,13 @@ fi
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$LOGFILE
 
 VALIDATE $? 'Downloading Catalogue Artifact'
-
-cd /app || exit &>>$LOGFILE
-
+mkdir -p /app
+cd /app &>>$LOGFILE
 VALIDATE $? 'moving to /app directory'
+
+#cd /app&>>$LOGFILE
+
+#VALIDATE $? 'moving to /app directory'
 
 unzip /tmp/catalogue.zip &>>$LOGFILE
 
