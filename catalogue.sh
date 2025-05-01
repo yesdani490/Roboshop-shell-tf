@@ -48,7 +48,7 @@ else
   echo "User '$roboshop' does not exist so adding user."
   sudo useradd $roboshop
 fi
-echo "username added is:"$USERNAME
+echo "username added is:"$roboshop
 
 echo "Enter Directory name"
 read directory
