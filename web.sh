@@ -48,7 +48,7 @@ cd /usr/share/nginx/html ||exit  &>>$LOGFILE
 VALIDATE $? 'moving to default HTML Directory'
 unzip /tmp/web.zip
 VALIDATE $? 'Unzipping web artifact'
-cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf  &>>$LOGFILE
+cp /home/centos/Roboshop-shell-tf/roboshop.conf /etc/nginx/default.d/roboshop.conf  &>>$LOGFILE
 VALIDATE $? 'Copying Roboshop config '
 
 systemctl restart nginx &>>$LOGFILE
